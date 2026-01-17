@@ -1,0 +1,27 @@
+# Set Default Files For Apache To Look For #
+DirectoryIndex index.html index.php index.htm
+
+# Error Pages #
+ErrorDocument 404 /?page=file_not_found
+
+# Turn On Rewrite Engine and Set Base #
+RewriteEngine On
+RewriteBase /
+
+# If we receive a forwarded http request from a proxy...
+RewriteCond %{HTTP:X-Forwarded-Proto} =http [OR]
+
+# ...or just a plain old http request directly from the client
+RewriteCond %{HTTP:X-Forwarded-Proto} =""
+RewriteCond %{HTTPS} !=on
+
+# Redirect to https version
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+Header always set Content-Security-Policy "upgrade-insecure-requests;"
+
+# Deny Access To .htaccess #
+<Files .htaccess>
+	Order Allow,Deny
+	Deny from all
+</Files>
