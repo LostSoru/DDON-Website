@@ -1,0 +1,6 @@
+{
+    "require": {
+        "phpmailer/phpmailer": "7.0.1",
+        "smarty/smarty": "5.7.0"
+    }
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Activation - Dragon's Dogma Online</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2a2a2a; /* Dark gray background */
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        table {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            border: 1px solid #4e4e4e;
+            border-radius: 10px;
+            background-color: #333;
+        }
+        .header {
+            background-color: #5f1f3b; /* Dark red/purple, Dragon's Dogma theme */
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 10px 10px 0 0;
+            font-size: 24px;
+            font-family: 'Georgia', serif;
+            color: #f1c40f; /* Gold accent */
+        }
+        .header img {
+            width: 80%;
+        }
+        .content {
+            padding: 20px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #f1c40f; /* Gold */
+            color: #333;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .footer {
+            background-color: #1a1a1a;
+            color: #bbb;
+            text-align: center;
+            padding: 10px;
+            font-size: 12px;
+            border-radius: 0 0 10px 10px;
+        }
+        .footer a {
+            color: #f1c40f;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <!-- Header -->
+        <tr>
+            <td class="header">
+                <img src="https://ddo.socdesigns.com/images/logo.png" alt="Dragon's Dogma Online Logo">
+                <!-- <h1>Welcome to Dragon's Dogma Online</h1> -->
+            </td>
+        </tr>
+        
+        <!-- Main Content -->
+        <tr>
+            <td class="content">
+                <h2>Password Reset</h2>
+				<p>Hi {{account_name}},</p>
+				<p>Someone requested a password change for {{site_title}}</p>
+				<p>Reset Your Password!<br /><a href="{{site_url}}/?page=account&id=reset&account={{account_name}}&code={{password_token}}" class="cta-button">Reset Password</a></p>
+				<p>If you did not request a password reset then ignore this message</p>
+            </td>
+        </tr>
+        
+        <!-- Footer -->
+        <tr>
+            <td class="footer">
+                <p>&copy; {{site_title}}</p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
