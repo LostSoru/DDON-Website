@@ -108,7 +108,3 @@ refinement.
 
 Contributions are welcome! Bug reports, feature suggestions, and pull
 requests are appreciated.
-
-## License
-
-Add your license information here.
