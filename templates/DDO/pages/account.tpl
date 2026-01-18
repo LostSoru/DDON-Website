@@ -21,7 +21,7 @@
 							<p><strong>Name:</strong> {$ACCOUNT_NAME}</p>
 							<p><strong>Joined:</strong> {$ACCOUNT_CREATED}</p>
 							<p><strong>Last On:</strong> {$ACCOUNT_LAST_ON}</p>
-							<p><strong>Status:</strong> {if $ACCOUNT_STATE == 1}Member{elseif $ACCOUNT_STATE == 100}Admin{else}Banned{/if}</p>
+							<p><strong>Status:</strong> {if $ACCOUNT_STATE == 1}Member{elseif $ACCOUNT_STATE == 50}Moderator{elseif $ACCOUNT_STATE == 100}Admin{else}Banned{/if}</p>
 							<p><strong>Verified:</strong> {if $ACCOUNT_VERIFIED == TRUE}<font color="#009900">Email Verified</font>{else}<font color="#990000">Email Not Verified</font><br /><form action="" method="post"><button type="submit" name="send_verify">Resend Email</button></form>{/if}</p>
 							<br />
 							<br />

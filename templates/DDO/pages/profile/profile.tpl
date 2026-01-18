@@ -16,7 +16,7 @@
 					<div class="card">
 						<h3>Account Overview</h3>
 						<p><strong>Name:</strong> {$ACCOUNT_NAME}</p>
-						<p><strong>Rank:</strong> {if $ACCOUNT_STATE == 1}Member{elseif $ACCOUNT_STATE == 100}Admin{else}Banned{/if}</p></p>
+						<p><strong>Rank:</strong> {if $ACCOUNT_STATE == 1}Member{elseif $ACCOUNT_STATE == 50}Moderator{elseif $ACCOUNT_STATE == 100}Admin{else}Banned{/if}</p></p>
 					</div>
 				</div>
 				
