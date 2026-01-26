@@ -1,20 +1,110 @@
-First off I'm pretty new to creating my own git repo's so please bare with me.
+# Dragon's Dogma Online -- User Management Tool
 
-I created this repo to help with managing users on hosted Dragon's Dogma Online servers as there is currently no way to set your emails or even reset your passwords.
-With this you set it up on a webserver and connect it to your database which gives you the ability to have your players reset on their own. It has also been a while since I have
-coded anything and any help along the way is welcomed.
+> A simple PHP-based user management utility for hosted Dragon's Dogma
+> Online servers.
 
-The current setup should work on PHP Version 7.2 to the latest. My Test server was setup with PHP 8.3
-You will need to make sure you have the required PHP Modules installed as well for your php version: curl, pgsql, and pdo-pgsql
+## Overview
 
-You will also need Composer to install the external libraries used in this project
+This repository was created to help server administrators manage user
+accounts for hosted **Dragon's Dogma Online** servers.
 
-All your main global settings will be located in files/config/global_data.php
-This is for settings like your site title, layout, and email settings
-Your database connection settings are located in files/config/db_connect.php
+At the moment, DDO servers do not provide a built-in way for users to:
 
-By default I have HTML based emails enabled. You can disable it to just send out text based emails which can be set inside files/functions/email_func.php
-To change how your HTML emails look, just change the email.html and reset_email.html inside of templates/DDO/pages/email
+-   Set or update their username and email address
+-   Reset forgotten passwords
 
+This project aims to solve that problem by providing a **self-service
+password reset system** that can be hosted on your own web server and
+connected directly to your database.
 
-Just a reminder that this is an early version of this project and that it still needs work done on it.
+⚠️ **Note:** I'm relatively new to creating and maintaining GitHub
+repositories, and it's also been a while since I last worked extensively
+with PHP. Feedback, suggestions, and contributions are very welcome!
+
+## Features
+
+-   User password reset functionality
+-   Email-based reset flow (HTML or plain text)
+-   PostgreSQL database support
+-   Compatible with modern PHP versions
+
+## Requirements
+
+### PHP
+
+-   **PHP 7.2 or newer**
+-   Tested with **PHP 8.3**
+
+### Required PHP Extensions
+
+Make sure the following PHP modules are installed and enabled:
+
+-   curl
+-   pgsql
+-   pdo-pgsql
+
+### Composer
+
+This project relies on external libraries managed through **Composer**.
+
+``` bash
+composer install
+```
+
+## Configuration
+
+### Global Settings
+
+All global site configuration options are located in:
+
+    files/config/global_data.php
+
+This includes settings such as:
+
+-   Site title
+-   Layout options
+-   Email configuration
+
+### Database Connection
+
+Database connection settings can be found in:
+
+    files/config/db_connect.php
+
+## Email Configuration
+
+### Email Format
+
+-   HTML emails are enabled by default
+-   You can switch to plain-text emails if preferred
+
+Edit the following file to change this behavior:
+
+    files/functions/email_func.php
+
+### Customizing HTML Emails
+
+HTML email templates are located at:
+
+    templates/DDO/pages/email/email.html
+    templates/DDO/pages/email/reset_email.html
+
+## Installation (Basic)
+
+1.  Upload the project to your web server
+2.  Install dependencies using Composer
+3.  Configure database and global settings
+4.  Ensure required PHP extensions are installed
+5.  Test email delivery and password reset flow
+
+## Project Status
+
+🚧 **Early Development**
+
+This project is still in an early stage and requires additional work and
+refinement.
+
+## Contributing
+
+Contributions are welcome! Bug reports, feature suggestions, and pull
+requests are appreciated.
